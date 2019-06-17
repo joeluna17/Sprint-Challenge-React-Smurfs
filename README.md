@@ -29,8 +29,17 @@ In this challenge, you will create a Single Page Application complete with Clien
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the differences between `client-side routing` and `server-side routing`.
+
+		Server-side routing is the request for some desired resources that the user triggers that will route them to said resources from the index path via a url match. This usually means have to make a call to the server for the resources and then the server then sends that resource back which, because the page must be re-painted (DOM updated), the page is refreshed and given the resources requested. This timing of this whole process will depend on the user’s bandwidth.  Client-side routing used javascript that is already available that the us and the state/memory of our application. This means that when we request a resource we can take advantage of the local state data and gain those resources without having to make a call to the server which will look instantaneous. The only drawback is the initial loading and caching of the data to state, after that the application performance is superior to server-side routing.
+
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+     For the “C” which means create, the HTTP method equivalent would be the post method. For “R” which means read, the HTTP method equivalent would be the get method. For “U” which means update, the HTTP method equivalent would be the put method. For “D” which means delete, the HTTP method equivalent would be the delete method.
+
 - [ ] Mention three tools we can use to make AJAX requests.
+
+To make AJAX request we use Promises which are used like callbacks to allow for sending data to the server and allowing for the minimal data transmission allowing less resources of the network to be used, HTTP methods that allows for communication with the server/API, and Axios library which allows us to follow the CRUD method of our data to the server end points. When combined the create a very easy and safe way to manipulate our data.
 
 
 ## Project Set Up
